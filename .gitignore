@@ -16,6 +16,8 @@ cypress/downloads/
 cypress.env.json
 .env
 
+.DS_Store
+.idea/
 # Testing artifacts
 cypress/logs/
 coverage/
