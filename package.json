@@ -1,0 +1,23 @@
+{
+  "name": "fishingbooker-qa-automation",
+  "version": "1.0.0",
+  "description": "API test automation for FishingBooker crew_member_photos endpoint",
+  "scripts": {
+    "generate:fixtures": "ts-node cypress/fixtures/generate-fixtures.ts",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run",
+    "cy:run:crew": "cypress run --spec 'cypress/e2e/crew_member_photos/**/*.cy.ts'",
+    "pretest": "npm run generate:fixtures",
+    "test": "npm run cy:run:crew"
+  },
+  "devDependencies": {
+    "@types/form-data": "^2.2.1",
+    "@types/node": "^20.11.0",
+    "cypress": "^15.13.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "form-data": "^4.0.5"
+  }
+}
